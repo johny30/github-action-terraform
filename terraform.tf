@@ -9,7 +9,8 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "aws-terraform.tfstate" 
+    bucket = "aws-terraform.tfstate"
     key    = "env/dev/terraform.tfstate"
-  } 
-} 
+    region = "ca-central-1"
+  }
+}
