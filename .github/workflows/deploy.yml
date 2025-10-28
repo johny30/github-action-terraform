@@ -26,19 +26,21 @@ jobs:
         with:
           terraform_version: 1.7.0
 
+      # ... (inside the 'steps' section)
+
       - name: Terraform Init
         run: terraform init
-        working-directory: working-directory: class5/github-action-terraform
+        working-directory: class5 # <-- CHANGE THIS
 
       - name: Terraform Validate
         run: terraform validate
-        working-directory: class5/github-action-terraform # <--- CRITICAL ADDITION 2
+        working-directory: class5 # <-- CHANGE THIS
 
       - name: Terraform Plan
         run: terraform plan -out=tfplan
-        working-directory: class5/github-action-terraform # <--- CRITICAL ADDITION 3
+        working-directory: class5 # <-- CHANGE THIS
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main'
         run: terraform apply -auto-approve tfplan
-        working-directory: class5/github-action-terraform # <--- CRITICAL ADDITION 4
+        working-directory: class5 # <-- CHANGE THIS
