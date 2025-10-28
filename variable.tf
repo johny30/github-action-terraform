@@ -7,7 +7,6 @@ default       = "ca-central-1"
 
 
 variable "bucket_name" {
-type           = string
-description = "Your Bucketname"
-default     = "aws-terraform.tfstate"
+  type        = string
+  description = "aws-terraform.tfstate"
 }
