@@ -28,7 +28,7 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
-        working-directory: class5/github-action-terraform # <--- CRITICAL ADDITION 1
+        working-directory: working-directory: class5/github-action-terraform
 
       - name: Terraform Validate
         run: terraform validate
